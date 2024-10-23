@@ -1,0 +1,16 @@
+services:
+  seb:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/seb
+    command:
+      [
+        "/seb/create-draft.sh",
+        "Jeffrey Farnol",
+        "Martin Conisby's Vengeance",
+        "9835",
+      ]
+    stdin_open: true
+    tty: true
